@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR</title>
+</head>
+<body>
+<div style="text-align: center;color: crimson"><h1>{{ tips }}</h1></div>
+<div style="text-align: center;color: crimson"><h1>{{ tips_en }}</h1></div>
+<div style="text-align: center"><h1>操作错误，请检查你的操作</h1></div>
+<div style="text-align: center"><h1>Operation Error,please check your operation</h1></div>
+<div style="text-align: center"><a href="{{ url }}"><h2>返回</h2></a></div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

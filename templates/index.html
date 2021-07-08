@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>A1Box-首页</title>
+</head>
+<body>
+<div class="document">
+    <nav>
+    <ul class="top">
+        <li><a href="/">主页</a></li>
+        <li><a href="/log">更新日志</a></li>
+        <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+        <li style="float:right"><a class="active" href="/about">关于</a></li>
+    </ul>
+    </nav>
+        <main>
+            <div class="inner">
+                <h1 class="text">Welcome to A1Box</h1>
+                <div class="border"></div>
+                <div class="table">
+                    <div class="row">
+                        <div class="col">
+                                <div class="name"><h3>编解码</h3></div>
+                        </div>
+                        <div class="col">
+                                <div class="name"><a href="/app/base64"><button>Base64编解码</button></a></div>
+                        </div>
+                        <div class="col">
+                                <div class="name"><a href="/app/base85"><button>Base85编解码</button></a></div>
+                        </div>
+                        <div class="col">
+                                <div class="name"><a href="/app/base32"><button>Base32编解码</button></a></div>
+                        </div>
+                        <div class="col">
+                                <div class="name"><a href="/app/base16"><button>Base16编解码</button></a></div>
+                        </div>
+                        <div class="col">
+                                <div class="name"><a href="/app/url"><button>URL编解码</button></a></div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col">
+                                <div class="name"><h3>实用小工具</h3></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/qrcode"><button>QRCode生成器</button></a></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/imgtobase64"><button>图片转Base64</button></a></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/covid-19"><button>新冠疫情</button></a></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/random"><button>随机数生成器</button></a></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/bvtoav"><button>Bilibili BV转AV</button></a></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <div class="name"><h3>安全工具</h3></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/app/shell"><button>WebShell在线检测</button></a> </div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="http://share.a1andns.com:8000/"><button>安全资源共享</button></a> </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col">
+                                <div class="name"><h3>小游戏</h3></div>
+                        </div>
+                        <div class="col">
+                            <div class="name"><a href="/game/2048"><button>2048网页版</button></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <footer>
+        <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+    </footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

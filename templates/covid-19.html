@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>Covid-19情况、地图、趋势</title>
+    <style>
+        .document-19{
+            height: 110vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .col-19{
+            flex: 40%;
+            max-width: 40%;
+            box-sizing: border-box;
+            padding: 15px;
+            text-align: center;
+        }
+        iframe{
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<div class="document-19">
+<nav>
+<ul class="top">
+  <li><a href="/">主页</a></li>
+  <li><a href="/log">更新日志</a></li>
+  <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+  <li style="float:right"><a class="active" href="/about">关于</a></li>
+</ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text">Covid-19情况、地图、趋势</h1>
+        <div class="border"></div>
+        <div class="row-center">
+            <div class="col-19">
+                <p><strong>新冠疫情地图</strong></p>
+                <div class="bingwidget" style="text-align: center; height: 50%; width: 70%" data-type="covid19_modules" data-language="zh-CN" data-modules='[{"_type": "map", "location-id":"/China (mainland)"}]'></div>
+            </div>
+            <div class="col-19">
+                <p><strong>新冠疫情趋势</strong></p>
+                <div class="bingwidget" style="text-align: center;height: 50%;width: 700px" data-type="covid19_modules" data-language="zh-CN" data-modules='[{"_type": "trends", "location-id":"/China (mainland)"}]'></div>
+            </div>
+            <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>
+        </div>
+    </div>
+    <p>本页面组件和数据来源自Bing开源疫情情况组件</p><a href="https://github.com/microsoft/COVID-19-Widget">Bing COVID-19 Widget</a>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

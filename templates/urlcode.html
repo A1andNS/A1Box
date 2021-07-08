@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>{{ name }}</title>
+</head>
+<body>
+<div class="document">
+<nav>
+    <ul class="top">
+      <li><a href="/">主页</a></li>
+      <li><a href="/log">更新日志</a></li>
+      <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+      <li style="float:right"><a class="active" href="/about">关于</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text">{{ name }}</h1>
+        <div class="border"></div></br></br>
+        <form action="/app/{{ func }}">
+            <div class="content-base">
+                <label>
+                    <textarea  class="textarea" type="text" name="text">{{ result }}</textarea>
+                </label>
+            </div>
+            <div class="row-center">
+                <div class="col"><input class="encode" type="submit" value="Encode" name="type"></div>
+                <div class="col"><input class="decode" type="submit" value="Decode" name="type"></div>
+            </div>
+        </form>
+        <div class="space-common"></div>
+        <div class="content">
+            <p style="font-size: 18px">url编码是一种浏览器用来打包表单输入的格式，浏览器从表单中获取所有的name和其中的值</p>
+            <p style="font-size: 18px">将它们以name/value参数编码（移去那些不能传送的字符，将数据排行等等）作为URL的一部分或者分离地发给服务器。</p>
+            <h3>示例</h3>
+            <p style="font-size: 18px">原文：www.xxx.com/?name=1+2</p>
+            <p style="font-size: 18px">编码后：www.xxx.com/%3Fname%3D1%2B2</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <script type="application/javascript" src="/static/js/egg.js"></script>
+    <title>A1Box-关于</title>
+</head>
+<body>
+<div class="document-about">
+<nav>
+    <ul class="top">
+      <li><a href="/">主页</a></li>
+      <li><a href="/log">更新日志</a></li>
+      <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+      <li style="float:right"><a class="active" href="/about">关于</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text">About A1Box</h1>
+        <div class="border"></div></br></br>
+        <div class="content">
+        <p class="text-about">这是一个利用课余时间开发的基于Python Flask框架的工具集合</p>
+        <p class="text-about">目的是为了在一些工作和学习中更便利地找到合适的工具，而不用借助收索引擎。</p>
+        <p class="text-about">This is a collection of tools based on the Python Flask framework developed in spare time. </p>
+        <p class="text-about">The purpose is to find suitable tools in some work and study without using search engines.</p>
+        <p class="text-about" style="text-align: right">By A1andNS from FAFU</p>
+        </br>
+        </br>
+        <div class="text-version" onclick="egg()"><br><br><br><h1 class="text">{{ version }}</h1></div>
+        </div>
+        </br></br>
+            <p class="text-about">联系作者 Contact the author</p></br>
+            <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1697483158" target="class"><img src="../static/img/qq.png" height="44" width="92" alt=""></a>
+            <a href="https://github.com/A1andNS" target="class"><img src="../static/img/github.png" height="44" width="44" alt=""></a>
+    </div>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

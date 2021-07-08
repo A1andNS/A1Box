@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>图片转BASE64</title>
+</head>
+<body>
+<div class="document">
+<nav>
+<ul class="top">
+  <li><a href="/">主页</a></li>
+  <li><a href="/log">更新日志</a></li>
+  <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+  <li style="float:right"><a class="active" href="/about">关于</a></li>
+</ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text">图片转BASE64</h1>
+        <div class="border"></div></br></br>
+        <div class="content-qr">
+            <div class="row-center">
+                <div class="col-qr">
+                    <form action="/app/imgtobase64" method="POST" enctype="multipart/form-data">
+                        <label>
+                            <textarea class="textarea-imgtobase" type="text" name="text">{{ result }}</textarea>
+                        </label>
+                        <p>在此处选择需要转换的图片：<input style="font-size: 16px" type="file" name="file" accept="png,jpg,bmp,jpeg"></p>
+                        <div class="row-center">
+                        <div class="col-qr"><input class="encode" type="submit" value="图片转文本" name="type"></div>
+                        <div class="col-qr"><input class="decode" type="submit" value="文本转图片" name="type"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-qr">
+                    <div id="img">
+                        <img src="{{ path }}" width="300px" height="300px" alt="无图片">
+                    </div>
+                    <div id="text">
+                        <p>点击获得原尺寸图片</p>
+                        <a href="{{path}}">{{ path }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>WEBSHELL在线检测</title>
+</head>
+<body>
+<div class="document">
+<nav>
+<ul class="top">
+  <li><a href="/">主页</a></li>
+  <li><a href="/log">更新日志</a></li>
+  <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+  <li style="float:right"><a class="active" href="/about">关于</a></li>
+</ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text" id="temp">WEBSHELL在线检测聚合平台</h1></br></br>
+        <form action="/app/shell" method="post" enctype="multipart/form-data">
+            <p style="font-size: 23px">请选择检测源:<select style="font-size: 20px" name="Source">
+                <option value="WEBDIR+">WEBDIR+</option>
+                <option value="Developing">Developing</option>
+            </select></p>
+            </br>
+            <p style="font-size: 23px">
+                <input style="font-size: 23px" type="file" name="file" accept="php, phtml, inc, php3, php4, php5, war, jsp, jspx, asp, aspx, cer, cdx, asa, ashx, asmx, cfm, rar, zip, tar, xz, tbz, tgz, tbz2, bz2, gz">
+                <input style="font-size: 23px" type="submit" style="color: #000000" onclick="document.getElementById('temp').innerText='检测中，请稍后'">
+            </p>
+        </form>
+        </br>
+        <div class="space-common"></div>
+            <h2><strong>目前支持检测的后缀</strong></h2></br>
+            <h3>文件类型:</h3>
+            <p style="color: red">php, phtml, inc, php3, php4, php5, war, jsp, jspx, asp, aspx, cer, cdx, asa, ashx, asmx, cfm</p></br>
+            <h3>压缩包类型:</h3>
+            <p style="color: red">rar, zip, tar, xz, tbz, tgz, tbz2, bz2, gz</p></br>
+            <div class="space"></div>
+            <p>目前支持的在线检测源为WEBDIR+</p>
+            <a href="https://scanner.baidu.com/#/pages/intro"><img src="../static/img/WEBDIR+.png"></a>
+        </div>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>

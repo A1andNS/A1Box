@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="author" content="A1andNS">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+    <title>随机数生成器</title>
+</head>
+<body>
+<div class="document">
+<nav>
+<ul class="top">
+  <li><a href="/">主页</a></li>
+  <li><a href="/log">更新日志</a></li>
+  <li><a href="ftp://ftp.a1andns.com">FTP服务器</a></li>
+  <li style="float:right"><a class="active" href="/about">关于</a></li>
+</ul>
+</nav>
+<main>
+    <div class="inner">
+        <h1 class="text">随机数生成器</h1>
+        <div class="border"></div></br></br>
+        <div class="content-qr">
+            <div class="row-center">
+                <div class="col-qr">
+                    <form action="/app/random" method="post">
+                        <div class="random-space"></div>
+                        <label>
+                            <strong>起始值: </strong><input class="random" type="text" name="start" value="{{ start }}">
+                        </label>
+                        <div class="random-space"></div>
+                        <label>
+                           <strong>结束值: </strong><input class="random" type="text" name="end" value="{{ end }}">
+                        </label>
+                        <div class="random-space"></div>
+                        <label>
+                            <strong>数量值: </strong><input class="random" type="text" name="num" value="{{ num }}">
+                        </label>
+                        <div class="random-space"></div>
+                        <div class="random-space"></div>
+                        <input class="encode" type="submit" value="生成">
+                    </form>
+                </div>
+                <div class="col-qr">
+                    <label>
+                        <strong style="font-size: 20px">生成结果处</strong><textarea class="textarea-qr" type="text" readonly>{{ result }}</textarea>
+                    </label>
+                </div>
+                </div>
+            </div>
+        </div>
+</main>
+<footer>
+    <p>Copyright © 2021 <a href="https://a1andns.github.io">A1andNS</a></p>
+</footer>
+</div>
+<script src="/static/js/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    </script>
+</body>
+</html>
